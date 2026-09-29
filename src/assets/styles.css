@@ -51,6 +51,11 @@ main {
     text-align: center;
 }
 
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .site-header ul {
     list-style: none;
     margin: 0;
@@ -191,6 +196,19 @@ a.primary-button {
     margin: 0 auto;
 }
 
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-content img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+}
+
 .categories,
 .learning-guide,
 .community-info {
@@ -253,6 +271,13 @@ a.primary-button {
 .resource-card {
     display: flex;
     flex-direction: column;
+}
+
+.resource-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
 }
 
 .resource-card ul {
@@ -572,6 +597,26 @@ textarea:focus {
     margin: 0.25rem 0;
 }
 
+.site-footer address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.25rem;
+    margin-top: 0.75rem;
+    font-style: normal;
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
 .site-footer nav {
     display: flex;
     flex-wrap: wrap;
@@ -626,6 +671,16 @@ textarea:focus {
         text-align: left;
     }
 
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-content p,
+    .about-content img {
+        flex: 1;
+    }
+
     .hero h2,
     .community-hero h2 {
         font-size: 3rem;
@@ -677,9 +732,9 @@ textarea:focus {
 .dark-mode th { background-color: #030712; }
 .dark-mode .about,
 .dark-mode .community-features,
+.dark-mode .categories,
 .dark-mode .resources-section,
 .dark-mode .form-section { background-color: #111827; }
-.dark-mode .categories,
 .dark-mode .learning-guide,
 .dark-mode .community-info,
 .dark-mode .topic-card,

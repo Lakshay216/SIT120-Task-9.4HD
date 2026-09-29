@@ -1,4 +1,7 @@
 <script setup>
+import webDevelopmentImage from "../assets/undraw_progressive-web-app_c4uq.svg";
+import programmingImage from "../assets/undraw_code-sample_kpju.svg";
+import cloudImage from "../assets/undraw_secure-server_lz9x.svg";
 import { useSavedResourcesStore } from "../stores/savedResourcesStore";
 
 const savedResources = useSavedResourcesStore();
@@ -7,18 +10,24 @@ const resources = [
     {
         id: "web-development",
         title: "Web Development",
+        image: webDevelopmentImage,
+        imageAlt: "Illustration of a progressive web application",
         description: "Start building websites by learning the core technologies used on the web.",
         tools: ["HTML", "CSS", "JavaScript"]
     },
     {
         id: "programming",
         title: "Programming",
+        image: programmingImage,
+        imageAlt: "Illustration of a code sample on a screen",
         description: "Develop problem-solving skills and learn how to create programs using popular programming languages.",
         tools: ["Python", "C++", "JavaScript"]
     },
     {
         id: "cloud-devops",
         title: "Cloud & DevOps",
+        image: cloudImage,
+        imageAlt: "Illustration of a secure server",
         description: "Learn about tools used to manage, deploy and maintain modern software applications.",
         tools: ["Git", "Docker", "Kubernetes"]
     }
@@ -42,6 +51,7 @@ const resources = [
             <div class="container resource-content">
                 <div class="resource-grid">
                     <article v-for="resource in resources" :key="resource.id" class="resource-card">
+                        <img class="resource-image" :src="resource.image" :alt="resource.imageAlt">
                         <h3>{{ resource.title }}</h3>
                         <p>{{ resource.description }}</p>
                         <ul>

@@ -1,4 +1,6 @@
 <script setup>
+import codeThinkingImage from "../assets/undraw_code-thinking_tqs9.svg";
+
 const topics = [
     {
         title: "Web Development",
@@ -48,13 +50,16 @@ const learningGuide = [
         <section class="about">
             <div class="container">
                 <h2>About DevHub</h2>
-                <p>
-                    DevHub is designed for students, beginner developers and
-                    experienced professionals who want a simple place to explore
-                    programming and development topics. From building websites to
-                    learning programming languages and cloud technologies, DevHub
-                    helps developers find useful learning resources in one place.
-                </p>
+                <div class="about-content">
+                    <p>
+                        DevHub is designed for students, beginner developers and
+                        experienced professionals who want a simple place to explore
+                        programming and development topics. From building websites to
+                        learning programming languages and cloud technologies, DevHub
+                        helps developers find useful learning resources in one place.
+                    </p>
+                    <img :src="codeThinkingImage" alt="Developer thinking through a programming problem">
+                </div>
             </div>
         </section>
 

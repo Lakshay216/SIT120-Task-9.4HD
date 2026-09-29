@@ -16,7 +16,9 @@ const links = [
 <template>
     <header class="site-header">
         <div class="container header-content">
-            <h1 class="logo">DevHub</h1>
+            <h1 class="logo">
+                <RouterLink to="/">DevHub</RouterLink>
+            </h1>
 
             <nav aria-label="Main navigation">
                 <ul>
